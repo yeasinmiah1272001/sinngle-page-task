@@ -85,7 +85,7 @@ const ProductPage = ({ product }) => {
           </div>
 
           <div className="flex items-center pt-5">
-            <span className="line-through text-[#8091A7] text-textColor mr-2">
+            <span className="line-through text-[#8091A7]  mr-2">
               ${product.old_price.toFixed(2)}
             </span>
             <span className="text-2xl font-bold text-btnColor">
