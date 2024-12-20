@@ -1,19 +1,25 @@
 const Modal = ({ cartItems, totalCartPrice, closeModal, totalQuantity }) => {
+  // Map of color hex codes to color names
+  const colorNames = {
+    "#816BFF": "Purple",
+    "#1FCEC9": "Teal",
+    "#4B97D3": "Blue",
+    "#3B4747": "Charcoal",
+  };
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="bg-white rounded-lg p-6 w-[650px] shadow-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center">
-          Checkout ({cartItems.length} Items)
-        </h2>
+        <h2 className="text-2xl font-bold mb-6 text-start">Your Cart</h2>
 
         <table className="w-full text-sm border-collapse mb-6">
           <thead>
             <tr className="border-b">
               <th className="py-2 text-left">Item</th>
-              <th className="py-2 text-left">Color</th>
-              <th className="py-2 text-left">Size</th>
-              <th className="py-2 text-center">Quantity</th>
-              <th className="py-2 text-right">Price</th>
+              <th className="py-2 text-left text-gray-400">Color</th>
+              <th className="py-2 text-left text-gray-400">Size</th>
+              <th className="py-2 text-center text-gray-400">Quantity</th>
+              <th className="py-2 text-right text-gray-400">Price</th>
             </tr>
           </thead>
           <tbody>
@@ -25,7 +31,7 @@ const Modal = ({ cartItems, totalCartPrice, closeModal, totalQuantity }) => {
                     <span className="text-sm">{item.title}</span>
                   </div>
                 </td>
-                <td className="py-2">{item.color}</td>
+                <td className="py-2">{colorNames[item.color] || item.color}</td>
                 <td className="py-2">{item.size}</td>
                 <td className="py-2 text-center">{item.quantity}</td>
                 <td className="py-2 text-right">${item.price.toFixed(2)}</td>

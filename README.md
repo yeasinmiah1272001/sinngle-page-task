@@ -1,8 +1,25 @@
-# React + Vite
+# E-Commerce Single Page Design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a single-page e-commerce application built using **React**. The application showcases a clean and responsive design, optimized for both desktop and mobile users.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Live Application](https://single-page-task.vercel.app)
+
+## Features
+
+- Responsive design for all devices.
+- Dynamic product rendering.
+- Modern UI with smooth user interactions.
+
+## Technology Stack
+
+- **Framework**: React
+- **Hosting**: Vercel
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yeasinmiah1272001/sinngle-page-task.git
+   ```

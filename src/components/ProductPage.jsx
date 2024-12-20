@@ -96,6 +96,8 @@ const ProductPage = ({ product }) => {
           <p className="text-textColor text-lg font-normal leading-[30px] pt-5 pr-1">
             {product.description}
           </p>
+          <p className="mt-2 text-gray-400">Type : {product.type}</p>
+          <p className="mt-2">Watch : {product.model_number}</p>
 
           <div className="pt-5 flex flex-col gap-[10px]">
             <span className="text-lightBlack text-lg font-bold leading-5 block">
@@ -106,7 +108,7 @@ const ProductPage = ({ product }) => {
                 <div
                   key={index}
                   onClick={() => setSelectedColor(color)}
-                  className={`w-6 h-6 rounded-full border-2 cursor-pointer ${
+                  className={`w-[16px] h-[16px] rounded-full border-2 cursor-pointer ${
                     selectedColor === color
                       ? "border-btnColor"
                       : "border-gray-300"
@@ -126,13 +128,16 @@ const ProductPage = ({ product }) => {
                 <button
                   key={index}
                   onClick={() => setSelectedSize(size)}
-                  className={`px-[18px] py-2 border rounded-sm flex items-center gap-[10px] text-sm ${
+                  className={`px-[18px] h-[34px] w-[73px] border rounded-sm flex items-center gap-[10px] text-sm ${
                     selectedSize === size
                       ? "border-btnColor text-btnColor"
                       : "border-gray-300 text-lightBlack"
                   }`}
                 >
-                  <span className="font-bold">{size}</span>
+                  <div className=" gap-1 flex items-center text-sm ">
+                    <span className="font-bold">{size}</span>
+                    <span>${product.price * quantity}</span>
+                  </div>
                 </button>
               ))}
             </div>
