@@ -4,7 +4,7 @@ This is a single-page e-commerce application built using **React**. The applicat
 
 ## Live Demo
 
-[View Live Application](https://single-page-task.vercel.app)
+[View Live Application](https://sinngle-page-task.vercel.app/)
 
 ## Features
 
